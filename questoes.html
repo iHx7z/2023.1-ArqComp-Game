@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>questões</title>
+    <link rel="stylesheet" href="./css/questoes.css">
+</head>
+<body>
+
+    <!-- cabeçalho -->
+    <div id="cabecalho">
+        <header>
+        <ul>
+            <a href="index.html"><li>Home</li></a>
+            <a href="dash.html"><li>Dashboard</li></a>
+        </ul>
+        </header>
+    </div>
+    <!-- fim do cabeçalho -->
+
+    <!-- div principal -->
+    <div id="principal">
+        <div id="banner">
+            <div id="divBanner">    
+            <h1 id="tituloBanner">Qual é a sigla para Central Process Unit?</h1>
+            </div>
+
+            <div id="divBotao">
+                <div id="divTexto1">
+            <input type="checkbox" id="q1alternativa1"> <p id="texto1">CPU</p>
+                </div>
+                <div id="divTexto2">
+            <input type="checkbox" id="q1alternativa2"> <p id="texto2">RAM</p>
+                </div>
+                <div id="divTexto3">
+            <input type="checkbox" id="q1alternativa3"> <p id="texto3">ROM</p>
+                </div>
+                <div id="divTexto4">
+            <input type="checkbox" id="q1alternativa4"> <p id="texto4">SSD</p>
+                </div>
+            </div>
+            
+            <div id="paiBotao">
+            <button onclick="proximaQuestao()" id="proximaQuestao">próxima questão</button>
+            </div>
+        </div>
+    </div>
+    <!-- fim da principal -->
+
+    <!-- div principal -->
+    <div id="principal2">
+        <div id="banner">
+            <div id="divBanner">    
+            <h1 id="tituloBanner">Qual é a sigla para Central Process Unit?</h1>
+            </div>
+
+            <div id="divBotao">
+                <div id="divTexto1">
+            <input type="checkbox" id="q1alternativa1"> <p id="texto1">CPU</p>
+                </div>
+                <div id="divTexto2">
+            <input type="checkbox" id="q1alternativa2"> <p id="texto2">RAM</p>
+                </div>
+                <div id="divTexto3">
+            <input type="checkbox" id="q1alternativa3"> <p id="texto3">ROM</p>
+                </div>
+                <div id="divTexto4">
+            <input type="checkbox" id="q1alternativa4"> <p id="texto4">SSD</p>
+                </div>
+            </div>
+            
+            <div id="paiBotao">
+            <button onclick="proximaQuestao()" id="proximaQuestao">próxima questão</button>
+            </div>
+        </div>
+    </div>
+    <!-- fim da principal -->
+
+    <!-- começo do rodapé -->
+    <div class="rodapé">
+        <h4> copyright by anthony ferreira & pedro pinto &copy; </h4>
+    </div>
+    <!-- fim do rodapé -->
+
+</body>
+</html>
+
+<script>
+
+    principal2.innerHTML = ``
+
+    function proximaQuestao () {
+        principal.innerHTML = ``
+
+        principal2.innerHTML = `
+        <!-- div principal -->
+    <div id="principal2">
+        <div id="banner">
+            <div id="divBanner">    
+            <h1 id="tituloBanner">Qual é a sigla para Central Process Unit?</h1>
+            </div>
+
+            <div id="divBotao">
+                <div id="divTexto1">
+            <input type="checkbox" id="q1alternativa1"> <p id="texto1">CPU</p>
+                </div>
+                <div id="divTexto2">
+            <input type="checkbox" id="q1alternativa2"> <p id="texto2">RAM</p>
+                </div>
+                <div id="divTexto3">
+            <input type="checkbox" id="q1alternativa3"> <p id="texto3">ROM</p>
+                </div>
+                <div id="divTexto4">
+            <input type="checkbox" id="q1alternativa4"> <p id="texto4">SSD</p>
+                </div>
+            </div>
+            
+            <div id="paiBotao">
+            <button onclick="proximaQuestao()" id="proximaQuestao">próxima questão</button>
+            </div>
+        </div>
+    </div>
+    <!-- fim da principal -->
+        `    
+    }
+
+</script>
