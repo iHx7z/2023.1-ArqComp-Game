@@ -57,16 +57,16 @@
 
             <div id="divBotao">
                 <div id="divTexto1">
-                    <button onclick="certo()">Resposta 1</buttom> <p id="texto1">EPROM é uma memória de computador programável e apagável eletronicamente.</p>
+                    <button onclick="certo1()">Resposta 1</buttom> <p id="texto1">EPROM é uma memória de computador programável e apagável eletronicamente.</p>
                 </div>
                 <div id="divTexto2">
-                    <button onclick="errado()">Resposta 2</buttom> <p id="texto2">EPROM é um tipo de memória não volátil que retém informações mesmo sem energia.</p>
+                    <button onclick="errado1()">Resposta 2</buttom> <p id="texto2">EPROM é um tipo de memória não volátil que retém informações mesmo sem energia.</p>
                 </div>
                 <div id="divTexto3">
-                    <button onclick="errado()">Resposta 3</buttom> <p id="texto3">EPROM permite a gravação de dados pelo fabricante e a leitura posterior pelo usuário final.</p>
+                    <button onclick="errado1()">Resposta 3</buttom> <p id="texto3">EPROM permite a gravação de dados pelo fabricante e a leitura posterior pelo usuário final.</p>
                 </div>
                 <div id="divTexto4">
-                    <button onclick="errado()">Resposta 4</buttom> <p id="texto4">EPROM foi amplamente usada para armazenar dados permanentes, como configurações e códigos de inicialização.</p>
+                    <button onclick="errado1()">Resposta 4</buttom> <p id="texto4">EPROM foi amplamente usada para armazenar dados permanentes, como configurações e códigos de inicialização.</p>
                 </div>
             </div>
             
@@ -87,6 +87,21 @@
 </html>
 
 <script>
+
+    var id = 0
+var curtidas1 = 0
+var curtidas2 = 0
+var curtidas3 = 0
+var curtidas4 = 0
+var curtidas5 = 0
+var curtidas6 = 0
+
+var errados1 = 0
+var errados2 = 0
+var errados3 = 0
+var errados4 = 0
+var errados5 = 0
+var errados6 = 0
 
 principal2.innerHTML = ``
 
@@ -136,17 +151,17 @@ principal2.innerHTML = ``
 
             <div id="divBotao">
                 <div id="divTexto1">
-                    <button onclick="errado()">Resposta 1</buttom> <p id="texto1">Unidade Logica de Aritimetrica</p>
+                    <button onclick="errado2()">Resposta 1</buttom> <p id="texto1">Unidade Logica de Aritimetrica</p>
                 </div>
                 <div id="divTexto2">
-                    <button onclick="certo()">Resposta 2</buttom> <p id="texto2">Unidade Logica e Aritimetrica</p>
+                    <button onclick="certo2()">Resposta 2</buttom> <p id="texto2">Unidade Logica e Aritimetrica</p>
                 </div>
                 <div id="divTexto3">
-                    <button onclick="errado()">Resposta 3</buttom> <p id="texto3">Unidade de Linguagem 
+                    <button onclick="errado2()">Resposta 3</buttom> <p id="texto3">Unidade de Linguagem 
                     Aritimetrica</p>
                 </div>
                 <div id="divTexto4">
-                    <button onclick="errado()">Resposta 4</buttom> <p id="texto4">Unidade Logica Avançada</p>
+                    <button onclick="errado2()">Resposta 4</buttom> <p id="texto4">Unidade Logica Avançada</p>
                 </div>
             </div>
             
@@ -175,16 +190,16 @@ principal2.innerHTML = ``
 
             <div id="divBotao">
                 <div id="divTexto1">
-                    <button onclick="errado()">Resposta 1</buttom> <p id="texto1">Chip Synchronization</p>
+                    <button onclick="errado3()">Resposta 1</buttom> <p id="texto1">Chip Synchronization</p>
                 </div>
                 <div id="divTexto2">
-                    <button onclick="errado()">Resposta 2</buttom><p id="texto2">Chip Specialization</p>
+                    <button onclick="errado3()">Resposta 2</buttom><p id="texto2">Chip Specialization</p>
                 </div>
                 <div id="divTexto3">
-                    <button onclick="errado()">Resposta 3</buttom> <p id="texto3">Chip Selector</p>
+                    <button onclick="errado3()">Resposta 3</buttom> <p id="texto3">Chip Selector</p>
                 </div>
                 <div id="divTexto4">
-                    <button onclick="certo()">Resposta 4</buttom> <p id="texto4">Chip Select</p>
+                    <button onclick="certo3()">Resposta 4</buttom> <p id="texto4">Chip Select</p>
                 </div>
             </div>
             
@@ -210,16 +225,16 @@ principal2.innerHTML = ``
 
             <div id="divBotao">
                 <div id="divTexto1">
-                    <button onclick="errado()">Resposta 1</buttom> <p id="texto1">Direct Memory Allocantion</p>
+                    <button onclick="errado4()">Resposta 1</buttom> <p id="texto1">Direct Memory Allocantion</p>
                 </div>
                 <div id="divTexto2">
-           <button onclick="errado()">Resposta 2</buttom> <p id="texto2">Data Manegement Algorithm</p>
+           <button onclick="errado4()">Resposta 2</buttom> <p id="texto2">Data Manegement Algorithm</p>
                 </div>
                 <div id="divTexto3">
-                    <button onclick="errado()">Resposta 3</buttom> <p id="texto3">Direct Memory Access</p>
+                    <button onclick="errado4()">Resposta 3</buttom> <p id="texto3">Direct Memory Access</p>
                 </div>
                 <div id="divTexto4">
-                    <button onclick="certo()">Resposta 4</buttom> <p id="texto4">Dynamic Memory Access</p>
+                    <button onclick="certo4()">Resposta 4</buttom> <p id="texto4">Dynamic Memory Access</p>
                 </div>
             </div>
             <div id="paiBotao">
@@ -245,16 +260,16 @@ principal2.innerHTML = ``
 
             <div id="divBotao">
                 <div id="divTexto1">
-                    <button onclick="certo()">Resposta 1</buttom> <p id="texto1">Um barramento que permite a transferência de dados entre a CPU e a memória RAM</p>
+                    <button onclick="certo5()">Resposta 1</buttom> <p id="texto1">Um barramento que permite a transferência de dados entre a CPU e a memória RAM</p>
                 </div>
                 <div id="divTexto2">
-                    <button onclick="errado()">Resposta 2</buttom> <p id="texto2">Uma unidade de controle que gerencia o fluxo de dados dentro de um processador.</p>
+                    <button onclick="errado5()">Resposta 2</buttom> <p id="texto2">Uma unidade de controle que gerencia o fluxo de dados dentro de um processador.</p>
                 </div>
                 <div id="divTexto3">
-                    <button onclick="errado()">Resposta 3</buttom> <p id="texto3">Um dispositivo de armazenamento de dados utilizado em sistemas de backup</p>
+                    <button onclick="errado5()">Resposta 3</buttom> <p id="texto3">Um dispositivo de armazenamento de dados utilizado em sistemas de backup</p>
                 </div>
                 <div id="divTexto4">
-                    <button onclick="errado()">Resposta 4</buttom> <p id="texto4">Uma interface de rede que permite a comunicação entre computadores.</p>
+                    <button onclick="errado5()">Resposta 4</buttom> <p id="texto4">Uma interface de rede que permite a comunicação entre computadores.</p>
                 </div>
             </div>
             
@@ -279,16 +294,16 @@ principal2.innerHTML = ``
 
             <div id="divBotao">
                 <div id="divTexto1">
-                    <button onclick="errado()">Resposta 1</buttom> <p id="texto1">Componentes que armazenam informações de contato dos usuários.</p>
+                    <button onclick="errado6()">Resposta 1</buttom> <p id="texto1">Componentes que armazenam informações de contato dos usuários.</p>
                 </div>
                 <div id="divTexto2">
-                    <button onclick="errado()">Resposta 2</buttom> <p id="texto2"> Circuitos que permitem a comunicação entre dispositivos periféricos.</p>
+                    <button onclick="errado6()">Resposta 2</buttom> <p id="texto2"> Circuitos que permitem a comunicação entre dispositivos periféricos.</p>
                 </div>
                 <div id="divTexto3">
-                    <button onclick="certo()">Resposta 3</buttom> <p id="texto3">Elementos de armazenamento de dados de alta velocidade em processadores.</p>
+                    <button onclick="certo6()">Resposta 3</buttom> <p id="texto3">Elementos de armazenamento de dados de alta velocidade em processadores.</p>
                 </div>
                 <div id="divTexto4">
-                    <button onclick="errado()">Resposta 4</buttom> <p id="texto4">Dispositivos utilizados para exibir informações em um monitor.
+                    <button onclick="errado6()">Resposta 4</buttom> <p id="texto4">Dispositivos utilizados para exibir informações em um monitor.
 </p>
                 </div>
             </div>
@@ -300,12 +315,362 @@ principal2.innerHTML = ``
         `    
     }
 
-function certo(){
+
+
+
+
+
+
+
+function certo1(){
+    curtidas1 = 1
+
+console.log(curtidasPicanha)
+
+
+// Enviando o valor da nova input
+fetch("/usuarios/Certo1", {
+    method: "POST",
+    headers: {
+        "Content-Type": "application/json"
+    },
+    body: JSON.stringify({
+        // crie um atributo que recebe o valor recuperado aqui
+        // Agora vá para o arquivo routes/usuario.js
+        idServer: id,
+        certo1Server: curtidas1
+
+    })
+}).then(function (resposta) {
+
+    console.log("resposta: ", resposta);
+
+}).catch(function (resposta) {
+    console.log(`#ERRO: ${resposta}`);
+});
+
 
 
 }
 
-function errado(){
+function errado1(){
+ errados1 = 1
+// Enviando o valor da nova input
+fetch("/usuarios/Errado1", {
+    method: "POST",
+    headers: {
+        "Content-Type": "application/json"
+    },
+    body: JSON.stringify({
+        // crie um atributo que recebe o valor recuperado aqui
+        // Agora vá para o arquivo routes/usuario.js
+        idServer: id,
+        Errado1Server: errados1
+
+    })
+}).then(function (resposta) {
+
+    console.log("resposta: ", resposta);
+
+}).catch(function (resposta) {
+    console.log(`#ERRO: ${resposta}`);
+});
+
+
+}
+
+
+
+function certo2(){
+    curtidas2 = 1
+
+console.log(curtidasPicanha)
+
+
+// Enviando o valor da nova input
+fetch("/usuarios/Certo2", {
+    method: "POST",
+    headers: {
+        "Content-Type": "application/json"
+    },
+    body: JSON.stringify({
+        // crie um atributo que recebe o valor recuperado aqui
+        // Agora vá para o arquivo routes/usuario.js
+        idServer: id,
+        certo2Server: curtidas2
+
+    })
+}).then(function (resposta) {
+
+    console.log("resposta: ", resposta);
+
+}).catch(function (resposta) {
+    console.log(`#ERRO: ${resposta}`);
+});
+
+
+
+}
+
+function errado2(){
+ errados2 = 1
+// Enviando o valor da nova input
+fetch("/usuarios/Errado2", {
+    method: "POST",
+    headers: {
+        "Content-Type": "application/json"
+    },
+    body: JSON.stringify({
+        // crie um atributo que recebe o valor recuperado aqui
+        // Agora vá para o arquivo routes/usuario.js
+        idServer: id,
+        Errado2Server: errados2
+
+    })
+}).then(function (resposta) {
+
+    console.log("resposta: ", resposta);
+
+}).catch(function (resposta) {
+    console.log(`#ERRO: ${resposta}`);
+});
+
+
+}
+
+
+
+function certo3(){
+    curtidas3 = 1
+
+console.log(curtidasPicanha)
+
+
+// Enviando o valor da nova input
+fetch("/usuarios/Certo3", {
+    method: "POST",
+    headers: {
+        "Content-Type": "application/json"
+    },
+    body: JSON.stringify({
+        // crie um atributo que recebe o valor recuperado aqui
+        // Agora vá para o arquivo routes/usuario.js
+        idServer: id,
+        certo3Server: curtidas3
+
+    })
+}).then(function (resposta) {
+
+    console.log("resposta: ", resposta);
+
+}).catch(function (resposta) {
+    console.log(`#ERRO: ${resposta}`);
+});
+
+
+
+}
+
+function errado3(){
+ errados3 = 1
+// Enviando o valor da nova input
+fetch("/usuarios/Errado3", {
+    method: "POST",
+    headers: {
+        "Content-Type": "application/json"
+    },
+    body: JSON.stringify({
+        // crie um atributo que recebe o valor recuperado aqui
+        // Agora vá para o arquivo routes/usuario.js
+        idServer: id,
+        Errado3Server: errados3
+
+    })
+}).then(function (resposta) {
+
+    console.log("resposta: ", resposta);
+
+}).catch(function (resposta) {
+    console.log(`#ERRO: ${resposta}`);
+});
+
+
+}
+
+
+
+function certo4(){
+    curtidas4 = 1
+
+console.log(curtidasPicanha)
+
+
+// Enviando o valor da nova input
+fetch("/usuarios/Certo4", {
+    method: "POST",
+    headers: {
+        "Content-Type": "application/json"
+    },
+    body: JSON.stringify({
+        // crie um atributo que recebe o valor recuperado aqui
+        // Agora vá para o arquivo routes/usuario.js
+        idServer: id,
+        certo4Server: curtidas4
+
+    })
+}).then(function (resposta) {
+
+    console.log("resposta: ", resposta);
+
+}).catch(function (resposta) {
+    console.log(`#ERRO: ${resposta}`);
+});
+
+
+
+}
+
+function errado4(){
+ errados5 = 1
+// Enviando o valor da nova input
+fetch("/usuarios/Errado4", {
+    method: "POST",
+    headers: {
+        "Content-Type": "application/json"
+    },
+    body: JSON.stringify({
+        // crie um atributo que recebe o valor recuperado aqui
+        // Agora vá para o arquivo routes/usuario.js
+        idServer: id,
+        Errado4Server: errados4
+
+    })
+}).then(function (resposta) {
+
+    console.log("resposta: ", resposta);
+
+}).catch(function (resposta) {
+    console.log(`#ERRO: ${resposta}`);
+});
+
+
+}
+
+
+
+function certo5(){
+    curtidas5 = 1
+
+console.log(curtidasPicanha)
+
+
+// Enviando o valor da nova input
+fetch("/usuarios/Certo5", {
+    method: "POST",
+    headers: {
+        "Content-Type": "application/json"
+    },
+    body: JSON.stringify({
+        // crie um atributo que recebe o valor recuperado aqui
+        // Agora vá para o arquivo routes/usuario.js
+        idServer: id,
+        certo5Server: curtidas5
+
+    })
+}).then(function (resposta) {
+
+    console.log("resposta: ", resposta);
+
+}).catch(function (resposta) {
+    console.log(`#ERRO: ${resposta}`);
+});
+
+
+
+}
+
+function errado5(){
+ errados5 = 1
+// Enviando o valor da nova input
+fetch("/usuarios/Errado5", {
+    method: "POST",
+    headers: {
+        "Content-Type": "application/json"
+    },
+    body: JSON.stringify({
+        // crie um atributo que recebe o valor recuperado aqui
+        // Agora vá para o arquivo routes/usuario.js
+        idServer: id,
+        Errado5Server: errados5
+
+    })
+}).then(function (resposta) {
+
+    console.log("resposta: ", resposta);
+
+}).catch(function (resposta) {
+    console.log(`#ERRO: ${resposta}`);
+});
+
+
+}
+
+
+
+
+function certo6(){
+    curtidas6 = 1
+
+console.log(curtidasPicanha)
+
+
+// Enviando o valor da nova input
+fetch("/usuarios/Certo6", {
+    method: "POST",
+    headers: {
+        "Content-Type": "application/json"
+    },
+    body: JSON.stringify({
+        // crie um atributo que recebe o valor recuperado aqui
+        // Agora vá para o arquivo routes/usuario.js
+        idServer: id,
+        certo6Server: curtidas6
+
+    })
+}).then(function (resposta) {
+
+    console.log("resposta: ", resposta);
+
+}).catch(function (resposta) {
+    console.log(`#ERRO: ${resposta}`);
+});
+
+
+
+}
+
+function errado6(){
+ errados6 = 1
+// Enviando o valor da nova input
+fetch("/usuarios/Errado6", {
+    method: "POST",
+    headers: {
+        "Content-Type": "application/json"
+    },
+    body: JSON.stringify({
+        // crie um atributo que recebe o valor recuperado aqui
+        // Agora vá para o arquivo routes/usuario.js
+        idServer: id,
+        Errado6Server: errados6
+
+    })
+}).then(function (resposta) {
+
+    console.log("resposta: ", resposta);
+
+}).catch(function (resposta) {
+    console.log(`#ERRO: ${resposta}`);
+});
 
 
 }

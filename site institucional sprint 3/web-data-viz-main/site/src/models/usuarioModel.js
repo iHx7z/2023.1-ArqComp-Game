@@ -31,8 +31,171 @@ function cadastrar(nome, email, senha, fkEmpresa) {
     return database.executar(instrucao);
 }
 
+
+
+// ------------------------------------Errados -------------------------------------------------------------------------------------------
+
+
+
+function errado1(id) {    
+    // Insira exatamente a query do banco aqui, lembrando da nomenclatura exata nos valores
+    //  e na ordem de inserção dos dados.
+    var instrucao = `
+        INSERT INTO pergunta1 (tipo, num ,fkUser) VALUES ('errado', 1);
+    `;
+    console.log("Executando a instrução SQL: \n" + instrucao);
+    return database.executar(instrucao);
+}
+
+
+function errado2(id) {    
+    // Insira exatamente a query do banco aqui, lembrando da nomenclatura exata nos valores
+    //  e na ordem de inserção dos dados.
+    var instrucao = `
+        INSERT INTO pergunta2 (tipo, num ,fkUser) VALUES ('errado', 1);
+    `;
+    console.log("Executando a instrução SQL: \n" + instrucao);
+    return database.executar(instrucao);
+}
+
+
+function errado3(id) {    
+    // Insira exatamente a query do banco aqui, lembrando da nomenclatura exata nos valores
+    //  e na ordem de inserção dos dados.
+    var instrucao = `
+        INSERT INTO pergunta3 (tipo, num ) VALUES ('errado', 1);
+    `;
+    console.log("Executando a instrução SQL: \n" + instrucao);
+    return database.executar(instrucao);
+}
+
+
+function errado4(id) {    
+    // Insira exatamente a query do banco aqui, lembrando da nomenclatura exata nos valores
+    //  e na ordem de inserção dos dados.
+    var instrucao = `
+        INSERT INTO pergunta4 (tipo, num ) VALUES ('errado', 1);
+    `;
+    console.log("Executando a instrução SQL: \n" + instrucao);
+    return database.executar(instrucao);
+}
+
+
+function errado5(id) {    
+    // Insira exatamente a query do banco aqui, lembrando da nomenclatura exata nos valores
+    //  e na ordem de inserção dos dados.
+    var instrucao = `
+        INSERT INTO pergunta5 (tipo, num ) VALUES ('errado', 1);
+    `;
+    console.log("Executando a instrução SQL: \n" + instrucao);
+    return database.executar(instrucao);
+}
+
+
+function errado6(id) {    
+    // Insira exatamente a query do banco aqui, lembrando da nomenclatura exata nos valores
+    //  e na ordem de inserção dos dados.
+    var instrucao = `
+        INSERT INTO pergunta6 (tipo, num) VALUES ('errado', 1);
+    `;
+    console.log("Executando a instrução SQL: \n" + instrucao);
+    return database.executar(instrucao);
+}
+
+
+
+
+// -------------------------------------------------CERTOS ------------------------------------------------------------------------------
+
+
+function certo1(id) {    
+    // Insira exatamente a query do banco aqui, lembrando da nomenclatura exata nos valores
+    //  e na ordem de inserção dos dados.
+    var instrucao = `
+        INSERT INTO pergunta1 (tipo, num ) VALUES ('certo', 1);
+    `;
+    console.log("Executando a instrução SQL: \n" + instrucao);
+    return database.executar(instrucao);
+}
+
+
+function certo2(id) {    
+    // Insira exatamente a query do banco aqui, lembrando da nomenclatura exata nos valores
+    //  e na ordem de inserção dos dados.
+    var instrucao = `
+        INSERT INTO pergunta2 (tipo, num ) VALUES ('certo', 1);
+    `;
+    console.log("Executando a instrução SQL: \n" + instrucao);
+    return database.executar(instrucao);
+}
+
+
+function certo3(id) {    
+    // Insira exatamente a query do banco aqui, lembrando da nomenclatura exata nos valores
+    //  e na ordem de inserção dos dados.
+    var instrucao = `
+        INSERT INTO pergunta3 (tipo, num) VALUES ('certo', 1);
+    `;
+    console.log("Executando a instrução SQL: \n" + instrucao);
+    return database.executar(instrucao);
+}
+
+
+function certo4(id) {    
+    // Insira exatamente a query do banco aqui, lembrando da nomenclatura exata nos valores
+    //  e na ordem de inserção dos dados.
+    var instrucao = `
+        INSERT INTO pergunta4 (tipo, num) VALUES ('certo', 1);
+    `;
+    console.log("Executando a instrução SQL: \n" + instrucao);
+    return database.executar(instrucao);
+}
+
+
+function certo5(id) {    
+    // Insira exatamente a query do banco aqui, lembrando da nomenclatura exata nos valores
+    //  e na ordem de inserção dos dados.
+    var instrucao = `
+        INSERT INTO pergunta5 (tipo, num ) VALUES ('certo', 1);
+    `;
+    console.log("Executando a instrução SQL: \n" + instrucao);
+    return database.executar(instrucao);
+}
+
+
+function certo6(id) {    
+    // Insira exatamente a query do banco aqui, lembrando da nomenclatura exata nos valores
+    //  e na ordem de inserção dos dados.
+    var instrucao = `
+        INSERT INTO pergunta6 (tipo, num ) VALUES ('certo', 1);
+    `;
+    console.log("Executando a instrução SQL: \n" + instrucao);
+    return database.executar(instrucao);
+}
+
+
+
+
+
+
+
+
 module.exports = {
     entrar,
     cadastrar,
     listar,
+
+    errado1,
+    errado2,
+    errado3,
+    errado4,
+    errado5,
+    errado5,
+
+    certo1,
+    certo2,
+    certo3,
+    certo4,
+    certo5,
+    certo6
 };
