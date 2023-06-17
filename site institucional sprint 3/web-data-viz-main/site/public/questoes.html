@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>questões</title>
+    <link rel="stylesheet" href="./css/questoes.css">
+</head>
+<body>
+
+    <!-- cabeçalho -->
+    <div id="cabecalho">
+        <header>
+        <ul>
+            <a href="index.html"><li>Home</li></a>
+            <a href="dash.html"><li>Dashboard</li></a>
+        </ul>
+        </header>
+    </div>
+    <!-- fim do cabeçalho -->
+
+    <!-- div principal -->
+    <div id="principal">
+        <div id="banner">
+            <div id="divBanner">    
+            <h1 id="tituloBanner">Qual é a sigla para Central Process Unit?</h1>
+            </div>
+
+            <div id="divBotao">
+                <div id="divTexto1">
+                    <button onclick="certo()">Resposta 1</buttom> <p id="texto1">EPROM é um tipo de memória de computador programável eletronicamente e apagável por exposição à luz ultravioleta (UV).</p>
+                </div>
+                <div id="divTexto2">
+                    <button onclick="errado()">Resposta 2</buttom> <p id="texto2">EPROM é uma memória de computador que armazena apenas dados temporários.</p>
+                </div>
+                <div id="divTexto3">
+                    <button onclick="errado()">Resposta 3</buttom> <p id="texto3">EPROM é um tipo de memória volátil que perde informações quando a energia é desligada.</p>
+                </div>
+                <div id="divTexto4">
+                    <button onclick="errado()">Resposta 4</buttom> <p id="texto4">EPROM é uma memória de leitura e gravação que permite alterações frequentes dos dados.</p>
+                </div>
+            </div>
+            
+            <div id="paiBotao">
+            <button onclick="proximaQuestao2()" id="proximaQuestao">próxima questão</button>
+            </div>
+        </div>
+    </div>
+    <!-- fim da principal -->
+
+    <!-- div principal -->
+    <div id="principal2">
+        <div id="banner">
+            <div id="divBanner">    
+            <h1 id="tituloBanner">O que EPROM?</h1>
+            </div>
+
+            <div id="divBotao">
+                <div id="divTexto1">
+                    <button onclick="certo()">Resposta 1</buttom> <p id="texto1">EPROM é uma memória de computador programável e apagável eletronicamente.</p>
+                </div>
+                <div id="divTexto2">
+                    <button onclick="errado()">Resposta 2</buttom> <p id="texto2">EPROM é um tipo de memória não volátil que retém informações mesmo sem energia.</p>
+                </div>
+                <div id="divTexto3">
+                    <button onclick="errado()">Resposta 3</buttom> <p id="texto3">EPROM permite a gravação de dados pelo fabricante e a leitura posterior pelo usuário final.</p>
+                </div>
+                <div id="divTexto4">
+                    <button onclick="errado()">Resposta 4</buttom> <p id="texto4">EPROM foi amplamente usada para armazenar dados permanentes, como configurações e códigos de inicialização.</p>
+                </div>
+            </div>
+            
+            <div id="paiBotao">
+            <button onclick="proximaQuestao2()" id="proximaQuestao">próxima questão</button>
+            </div>
+        </div>
+    </div>
+    <!-- fim da principal -->
+
+    <!-- começo do rodapé -->
+    <div class="rodapé">
+        <h4> copyright by anthony ferreira & pedro pinto &copy; </h4>
+    </div>
+    <!-- fim do rodapé -->
+
+</body>
+</html>
+
+<script>
+
+principal2.innerHTML = ``
+
+    // function proximaQuestao() {
+    //     principal.innerHTML = ``
+
+    //     principal2.innerHTML = `
+    
+        
+    //     <div id="banner">
+    //         <div id="divBanner">    
+    //         <h1 id="tituloBanner">Qual é a sigla para Central Process Unit?</h1>
+    //         </div>
+
+    //         <div id="divBotao">
+    //             <div id="divTexto1">
+    //         <input type="checkbox" id="q1alternativa1"> <p id="texto1">CPU</p>
+    //             </div>
+    //             <div id="divTexto2">
+    //         <input type="checkbox" id="q1alternativa2"> <p id="texto2">RAM</p>
+    //             </div>
+    //             <div id="divTexto3">
+    //         <input type="checkbox" id="q1alternativa3"> <p id="texto3">ROM</p>
+    //             </div>
+    //             <div id="divTexto4">
+    //         <input type="checkbox" id="q1alternativa4"> <p id="texto4">SSD</p>
+    //             </div>
+    //         </div>
+            
+    //         <div id="paiBotao">
+    //         <button onclick="proximaQuestao2()" id="proximaQuestao">próxima questão</button>
+    //         </div>
+    //     </div>
+    //     `    
+    // }
+
+    function proximaQuestao2() {
+     
+
+        principal.innerHTML = `
+    
+        
+        <div id="banner">
+            <div id="divBanner">    
+            <h1 id="tituloBanner">O que é ULA:</h1>
+            </div>
+
+            <div id="divBotao">
+                <div id="divTexto1">
+                    <button onclick="errado()">Resposta 1</buttom> <p id="texto1">Unidade Logica de Aritimetrica</p>
+                </div>
+                <div id="divTexto2">
+                    <button onclick="certo()">Resposta 2</buttom> <p id="texto2">Unidade Logica e Aritimetrica</p>
+                </div>
+                <div id="divTexto3">
+                    <button onclick="errado()">Resposta 3</buttom> <p id="texto3">Unidade de Linguagem 
+                    Aritimetrica</p>
+                </div>
+                <div id="divTexto4">
+                    <button onclick="errado()">Resposta 4</buttom> <p id="texto4">Unidade Logica Avançada</p>
+                </div>
+            </div>
+            
+            <div id="paiBotao">
+            <button onclick="proximaQuestao3()" id="proximaQuestao">próxima questão</button>
+            </div>
+        </div>
+        `    
+
+
+    }
+
+
+   
+
+    function proximaQuestao3() {
+        // principal.innerHTML = ``
+
+        principal.innerHTML = `
+    
+        
+        <div id="banner">
+            <div id="divBanner">    
+            <h1 id="tituloBanner">O que é CS?</h1>
+            </div>
+
+            <div id="divBotao">
+                <div id="divTexto1">
+                    <button onclick="errado()">Resposta 1</buttom> <p id="texto1">Chip Synchronization</p>
+                </div>
+                <div id="divTexto2">
+                    <button onclick="errado()">Resposta 2</buttom><p id="texto2">Chip Specialization</p>
+                </div>
+                <div id="divTexto3">
+                    <button onclick="errado()">Resposta 3</buttom> <p id="texto3">Chip Selector</p>
+                </div>
+                <div id="divTexto4">
+                    <button onclick="certo()">Resposta 4</buttom> <p id="texto4">Chip Select</p>
+                </div>
+            </div>
+            
+            <div id="paiBotao">
+            <button onclick="proximaQuestao4()" id="proximaQuestao">próxima questão</button>
+            </div>
+        </div>
+        `    
+    }
+
+    
+
+    function proximaQuestao4() {
+        // principal.innerHTML = ``
+
+        principal.innerHTML = `
+    
+        
+        <div id="banner">
+            <div id="divBanner">    
+            <h1 id="tituloBanner">Pra que serve DMA?</h1>
+            </div>
+
+            <div id="divBotao">
+                <div id="divTexto1">
+                    <button onclick="errado()">Resposta 1</buttom> <p id="texto1">Direct Memory Allocantion</p>
+                </div>
+                <div id="divTexto2">
+           <button onclick="errado()">Resposta 2</buttom> <p id="texto2">Data Manegement Algorithm</p>
+                </div>
+                <div id="divTexto3">
+                    <button onclick="errado()">Resposta 3</buttom> <p id="texto3">Direct Memory Access</p>
+                </div>
+                <div id="divTexto4">
+                    <button onclick="certo()">Resposta 4</buttom> <p id="texto4">Dynamic Memory Access</p>
+                </div>
+            </div>
+            <div id="paiBotao">
+            <button onclick="proximaQuestao5()" id="proximaQuestao">próxima questão</button>
+            </div>
+        </div>
+        `    
+    }
+
+
+    
+
+    function proximaQuestao5() {
+        // principal.innerHTML = ``
+
+        principal.innerHTML = `
+    
+        
+        <div id="banner">
+            <div id="divBanner">    
+            <h1 id="tituloBanner">O que é Data Bus</h1>
+            </div>
+
+            <div id="divBotao">
+                <div id="divTexto1">
+                    <button onclick="certo()">Resposta 1</buttom> <p id="texto1">Um barramento que permite a transferência de dados entre a CPU e a memória RAM</p>
+                </div>
+                <div id="divTexto2">
+                    <button onclick="errado()">Resposta 2</buttom> <p id="texto2">Uma unidade de controle que gerencia o fluxo de dados dentro de um processador.</p>
+                </div>
+                <div id="divTexto3">
+                    <button onclick="errado()">Resposta 3</buttom> <p id="texto3">Um dispositivo de armazenamento de dados utilizado em sistemas de backup</p>
+                </div>
+                <div id="divTexto4">
+                    <button onclick="errado()">Resposta 4</buttom> <p id="texto4">Uma interface de rede que permite a comunicação entre computadores.</p>
+                </div>
+            </div>
+            
+            <div id="paiBotao">
+            <button onclick="proximaQuestao6()" id="proximaQuestao">próxima questão</button>
+            </div>
+        </div>
+        `    
+    }
+
+    
+    function proximaQuestao6() {
+        // principal.innerHTML = ``
+
+        principal.innerHTML = `
+    
+        
+        <div id="banner">
+            <div id="divBanner">    
+            <h1 id="tituloBanner">O que são registradores?</h1>
+            </div>
+
+            <div id="divBotao">
+                <div id="divTexto1">
+                    <button onclick="errado()">Resposta 1</buttom> <p id="texto1">Componentes que armazenam informações de contato dos usuários.</p>
+                </div>
+                <div id="divTexto2">
+                    <button onclick="errado()">Resposta 2</buttom> <p id="texto2"> Circuitos que permitem a comunicação entre dispositivos periféricos.</p>
+                </div>
+                <div id="divTexto3">
+                    <button onclick="certo()">Resposta 3</buttom> <p id="texto3">Elementos de armazenamento de dados de alta velocidade em processadores.</p>
+                </div>
+                <div id="divTexto4">
+                    <button onclick="errado()">Resposta 4</buttom> <p id="texto4">Dispositivos utilizados para exibir informações em um monitor.
+</p>
+                </div>
+            </div>
+            
+            <div id="paiBotao">
+            <button onclick=" " id="proximaQuestao">Ver resultado</button>
+            </div>
+        </div>
+        `    
+    }
+
+function certo(){
+
+
+}
+
+function errado(){
+
+
+}
+
+
+</script>

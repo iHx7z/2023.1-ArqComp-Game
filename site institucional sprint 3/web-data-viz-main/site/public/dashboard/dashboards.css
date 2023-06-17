@@ -1,0 +1,601 @@
+/* pagina mural */
+
+*,
+body {
+  font-family: "Exo 2", sans-serif;
+}
+
+.janela{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: auto;
+  background-color: #161618;
+  padding: 30px;
+}
+
+.fundo-janela{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: auto;
+  background-color: #692b2e;
+}
+
+.navBar {
+  width: 600px;
+  display: flex;
+  list-style: none;
+  color: #692b2e;
+  justify-content: space-between;
+  font-size: 17px;
+  padding: 40px 40px 40px 40px;
+}
+
+.dash-right {
+  display: flex;
+  width: 80%;
+  height: fit-content;
+  background-color: #161618;
+  position: relative;
+  top: 0;
+  left: 25%;
+}
+.header-left {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 100%;
+  height: 150px;
+  background-color: whitesmoke;
+}
+
+.header-left img {
+  width: 220px;
+}
+
+#b_usuario {
+  color: orange;
+}
+
+select {
+  width: 150px;
+  height: 50px;
+  background-color: white;
+  border: 3px solid #692b2e;
+  color: #381113;
+  font-size: 20px;
+  border-radius: 2px;
+}
+
+button {
+  width: 150px;
+  height: 50px;
+  background-color: #692b2e;
+  border: none;
+  color: white;
+  font-size: 20px;
+  border-radius: 2px;
+  cursor: pointer;
+}
+
+.label-captura {
+  display: flex;
+  justify-content: center;
+}
+
+.dash-right .avisos {
+  width: 100%;
+  /* border: 3px solid pink; */
+  color: rgb(216, 216, 216);
+  font-family: "Exo 2", sans-serif;
+}
+
+.dash-right .avisos .container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.dash-right .avisos .container .div-form {
+  width: 100%;
+}
+
+.dash-right .avisos .container .div-form #form_postagem {
+  width: 100%;
+}
+
+.dash-right .avisos .div-form label {
+  width: 100%;
+}
+
+.dash-right .avisos .div-form input {
+  width: 100%;
+  border-radius: 5px;
+}
+
+.dash-right .avisos .div-form textarea {
+  width: 100%;
+  /* color: #E6005A; */
+  border: 3px solid #e6005a;
+  background-color: white;
+  border-radius: 5px;
+}
+
+.dash-right .avisos .div-form button {
+  cursor: pointer;
+  font-family: "Exo 2", sans-serif;
+  border: 0;
+  border-radius: 5px;
+  font-weight: 600;
+  font-size: 18px;
+  padding: 10px 15px;
+  color: white;
+  background-color: #e6005a;
+  width: 120px;
+}
+
+.publicacao-btn-editar {
+  cursor: pointer;
+  font-family: "Exo 2", sans-serif;
+  border: 0;
+  border-radius: 5px;
+  font-weight: 600;
+  font-size: 14px;
+  padding: 5px 8px;
+  color: white;
+  background-color: #e6005a;
+  width: 80px;
+}
+
+.publicacao {
+  display: flex;
+  flex-wrap: wrap;
+  align-content: stretch;
+  flex-direction: column;
+  justify-content: center;
+  align-items: stretch;
+  border-bottom: 3px solid #e6005a;
+  padding: 20px;
+}
+
+.publicacao > *:not(:last-child) {
+  padding: 0 0 10px 0;
+}
+
+.div-results {
+  width: 100%;
+}
+
+.div-results .feed-container {
+  background-color: #212124;
+  border-radius: 5px;
+  margin-bottom: 80px;
+}
+
+.div-buttons {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.div-buttons > * {
+  margin-left: 30px;
+}
+
+/* pagina graficos */
+
+.dash-header {
+  background-color: #212124;
+}
+
+.dash {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  background-color: #161618;
+  height: 100vh;
+  overflow: auto;
+}
+
+.regua {
+  display: flex;
+  justify-content: space-evenly;
+  width: 100%;
+  margin-top: 30px;
+}
+
+.informacao {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  width: 95%;
+  height: 50px;
+  background-color: #212124;
+  margin-top: 30px;
+}
+
+.informacao span {
+  font-size: 30px;
+  margin: 30px;
+  color: #fff;
+}
+
+.perigo-frio {
+  background-color: rgb(243, 18, 18);
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.perigo-frio::after{
+  content: "Verifique imediatamente as estufas!";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 80%;
+  background-color: #ffffff00;
+  padding: 10px;
+  display: none;
+  transition: all 0.3s ease;
+}
+
+.perigo-quente {
+  background-color: rgb(243, 18, 18);
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.perigo-quente::after{
+  content: "Verifique imediatamente as estufas !";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 80%;
+  background-color: #ffffff00;
+  padding: 10px;
+  display: none;
+  transition: all 0.3s ease;
+}
+
+.emergencia-quente {
+  background-color: #ff5927;
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.emergencia-quente::after{
+  content: "Verifique imediatamente as estufas !";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 80%;
+  background-color: #ffffff00;
+  padding: 10px;
+  display: none;
+  transition: all 0.3s ease;
+}
+
+.emergencia-frio {
+  background-color: #ff5927;
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.emergencia-frio::after{
+  content: "Sua estufa corre perigo !!";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 80%;
+  background-color: #ffffff00;
+  padding: 10px;
+  display: none;
+  transition: all 0.3s ease;
+}
+
+.alerta-frio {
+  background-color: #ffee58;
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.alerta-frio::after{
+  content: "Atenção, tem algo errado !";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 80%;
+  background-color: #ffffff00;
+  padding: 10px;
+  display: none;
+  transition: all 0.3s ease;
+}
+
+.alerta-quente {
+  background-color: #ffee58;
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.alerta-quente::after{
+  content: "Atenção, tem algo errado !";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 60%;
+  background-color: #ffffff00;
+  padding: 10px;
+  display: none;
+  transition: all 0.3s ease;
+}
+
+.ideal {
+  background-color: #9ccc65;
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.ideal::after{
+  content: "Esta tudo nos OK!";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 80%;
+  background-color: #ffffff00;
+  padding: 10px;
+  display: none;
+  transition: all 0.3s ease;
+}
+
+.item-regua {
+  padding: 5px;
+  width: 15%;
+  margin: 5px;
+  text-align: center;
+  padding-top: 15px;
+}
+
+.cards {
+  display: flex;
+  justify-content: center;
+  height: 100vh;
+  width: 100%;
+  align-items: center;
+  color: white;
+}
+
+.cards1 {
+  display: flex;
+  justify-content: center;
+  height: 500px;
+  width: 100%;
+  align-items: center;
+  color: white;
+}
+
+.cards-cadastro {
+  display: flex;
+  justify-content: center;
+  height: 50vh;
+  width: 100%;
+  align-items: center;
+  color: white;
+}
+
+.card {
+  margin: 2%;
+  width: 40%;
+  display: flex;
+  text-align: center;
+  height: auto;
+  justify-content: space-evenly;
+  align-items: center;
+  background-color: #212124;
+  font-size: 20px;
+}
+
+.card1 {
+  margin: 2%;
+  width: 40%;
+  display: flex;
+  text-align: center;
+  height: auto;
+  justify-content: space-evenly;
+  align-items: center;
+  background-color: #212124;
+  font-size: 20px;
+  border: #fff solid 3px;
+}
+
+.card p {
+  margin: 0;
+  font-size: 50px;
+  font-weight: lighter;
+  text-align: left;
+}
+
+.card span {
+  margin: 0;
+  font-size: 25px;
+  font-weight: lighter;
+  text-align: left;
+}
+
+.cards h1 {
+  font-size: 22px;
+  width: 100%;
+  border-bottom: solid #fff 1px;
+  padding: 10px;
+  text-align: center;
+  font-weight: 500;
+  margin: 20px;
+}
+
+.card1 h1 {
+  font-size: 22px;
+  width: 100%;
+  border-bottom: solid #fff 3px;
+  padding: 10px;
+  text-align: center;
+  font-weight: 500;
+  margin: 20px;
+}
+
+.temperatura, .umidade {
+  margin: 5px;
+  margin-left: 20px;
+  width: 75%;
+  height: 130px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.sens-alerta {
+  width: 13%;
+  height: 30%;
+  border-radius: 50px;
+  margin-top: 6%;
+  /* background-color: #c7c7c7; */
+}
+.cor-alertau {
+  width: 13%;
+  height: 30%;
+  border-radius: 50px;
+  margin-top: 6%;
+  /* background-color: #c7c7c7; */
+}
+
+.btns-dash {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+.graph {
+  width: 80%;
+  margin: auto;
+  padding-top: 10px;
+}
+
+.tituloGraficos {
+  color: rgb(216, 216, 216);
+  display: flex;
+  justify-content: center;
+}
+
+.btn-chart {
+  font-family: "Exo 2", sans-serif;
+  border: 0;
+  font-weight: 600;
+  font-size: 18px;
+  padding: 10px 15px;
+  color: #e6005a;
+  background-color: white;
+  margin: 5px;
+  border-radius: 3px;
+}
+
+.btn-pink {
+  color: white;
+  background-color: #e6005a;
+}
+
+.btn-white {
+  color: #e6005a;
+  background-color: white;
+
+}
+
+.label-captura {
+  height: 80px;
+}
+
+.display-none {
+  display: none;
+}
+
+.display-flex {
+  display: flex;
+}
+
+.display-block {
+  display: block;
+  width: 80%;
+  background-color: #212124;
+  margin: 30px;
+}
+
+canvas {
+  width: 100% !important;
+  height: 100% !important;
+}
+
+input {
+  padding: 10px 15px;
+  text-align: center;
+  border: none;
+}
+
+#input_nome {
+  width: 390px;
+}
+
+#input_numero {
+  width: 50px;
+}
+
+#input_rua {
+  width: 300px;
+}
+
+#input_cep {
+  width: 107px;
+}
+
+#input_andar {
+  width: 107px;
+}
+
+#input_complemento {
+  width: 107px;
+}
+
+#endereco {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.card button {
+  margin: 10px;
+}
+
+#temp_sens_1 {
+  color: #fff;
+  border-radius: 20px;
+  height: 80px;
+  width: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 150px;
+}
+
+#temp_sens_3 {
+  color: #fff;
+  border-radius: 20px;
+  height: 80px;
+  width: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.ajuda{
+  display: flex;
+  justify-content: center;
+  width: auto;
+  font-size: x-large
+}
+

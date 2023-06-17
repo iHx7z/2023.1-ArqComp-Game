@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <link rel="shortcut icon" href="../assets/icon/favicon2.ico" type="image/x-icon">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tempo Real | FungusTech</title>
+
+    <link rel="stylesheet" href="../css/fungi.css">
+    <link rel="stylesheet" href="dashboards.css">
+
+
+    <script src="../js/funcoes.js"></script>
+
+    <script src="alerta.js"></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body onload="validarSessao(), VerificarUsuarioOuEmpresa(), atualizacaoPeriodica()">
+
+    <div class="header-left">
+        <div class="hello">
+            <h3>Olá, <span id="b_usuario">usuário</span>!</h3>
+        </div>
+        <ul class="navBar">
+            <li><a href="./cards.html">Dashboard</a></li>
+            <li id="cadastrar_local_estufa"><a href="../cadastrarLocal.html">Administrar Estufa</a></li>
+            <li id="cadastrar_usuario_empresa"><a href="../cadastrarUsuarioNaEmpresa.html">Cadastrar Usuario</a></li>
+            <li><a href="../Manual_De_Instalação.docx">Manual de Instalação</a></li>
+        </ul>
+        <select id="estufasSelect" name="unidade" onChange="AbrirSecao(this.value)">
+            <option value="">Estufas</option>
+        </select>
+
+        <a href="../index.html"><button onclick="sair()">Sair</button></a>
+        <h1><img src="../imgs/logo.png" alt=""></h1>
+    </div>
+
+    <div class="janela">
+
+
+        <div class="informacao"><span>Analise</span></div>
+        <div class="cards1">
+            <div class="card1">
+                <h1>Estufas - Analise de Temperatura</h1>
+                <div class="temperatura">
+                    <p id="temp_sens_1">-°C</p>
+                    <div class="classe_temperatura" id="card_1"></div>
+                </div>
+            </div>
+
+            <div class="card1">
+                <h1>Estufas - Analise de Umidade</h1>
+                <div class="temperatura">
+                    <p id="temp_sens_3">%</p>
+                </div>
+                <div style="width: 40%; display: flex; justify-content: end;">
+                    <div class="classe_temperaturau" id="card_3"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="informacao"><span>Métricas</span></div>
+
+        <div class="regua">
+            <div class="item-regua perigo-frio">
+                <h4>Crítico</h4>
+                <h2>16°C</h2>
+            </div>
+            <!-- <div class="item-regua emergencia-frio">
+                <h4>Emergência</h4>
+                <h2>18°C</h2>
+            </div> -->
+            <div class="item-regua alerta-frio">
+                <h4>Alerta</h4>
+                <h2>20°C</h2>
+            </div>
+            <div class="item-regua ideal">
+                <h4>Ideal</h4>
+                <h2>22°C | 28°C</h2>
+            </div>
+            <div class="item-regua alerta-quente">
+                <h4 class="1">Alerta</h4>
+                <h2>28.5°C</h2>
+            </div>
+            <!-- <div class="item-regua emergencia-frio">
+                <h4>Emergência</h4>
+                <h2>30°C</h2>
+            </div> -->
+            <div class="item-regua perigo-quente">
+                <h4>Crítico</h4>
+                <h2>32°C</h2>
+            </div>
+        </div>
+
+        <div class="regua">
+            <div class="item-regua perigo-frio">
+                <h4>Crítico</h4>
+                <h2>65%</h2>
+            </div>
+            <!-- <div class="item-regua emergencia-frio">
+                <h4>Emergência</h4>
+                <h2>70%</h2>
+            </div> -->
+            <div class="item-regua alerta-frio">
+                <h4>Alerta</h4>
+                <h2>75%</h2>
+            </div>
+            <div class="item-regua ideal">
+                <h4>Ideal</h4>
+                <h2>80% | 90%</h2>
+            </div>
+            <div class="item-regua alerta-quente">
+                <h4>Alerta</h4>
+                <h2>92%</h2>
+            </div>
+            <!-- <div class="item-regua emergencia-frio">
+                <h4>Emergência</h4>
+                <h2>95%</h2>
+            </div> -->
+            <div class="item-regua perigo-quente">
+                <h4>Crítico</h4>
+                <h2>99%</h2>
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        <h4 class="container">Precisa de ajuda ?</h4>
+        
+    </div>
+
+    </div>
+    <div class="footer">
+        <div class="container">Entre em contato conosco atráves do email: <b>fungustech-help.freshdesk.com</b>
+        </div>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.5/dist/sweetalert2.all.min.js"></script>
+<script>
+    var idEmpresa = sessionStorage.getItem('ID_EMPRESA')
+    fetch(`/local/buscar/${idEmpresa}`)
+        .then(function (resposta) {
+            console.log("ESTOU NO THEN DO entrar()!")
+
+            if (resposta.ok) {
+                console.log(resposta);
+
+                resposta.json().then(json => {
+                    console.log(json);
+                    console.log(JSON.stringify(json));
+
+                    var estufas = json
+
+                    var selectElement = document.getElementById('estufasSelect');
+
+                    // Itera sobre o array de empresas e cria as opções do select
+                    for (let i = 0; i < estufas.length; i++) {
+                        const estufa = estufas[i];
+                        const estufaNome = estufa.nome
+                        const optionElement = document.createElement('option');
+                        optionElement.value = '../Dashboard.html'
+                        optionElement.text = estufaNome;
+                        selectElement.appendChild(optionElement);
+                    }
+                });
+
+            }
+        }).catch(function (erro) {
+            console.log(erro);
+            cardErro.style.display = "block"
+            mensagem_erro.innerHTML = "O Login está inválido";
+        })
+
+    console.log(usuario)
+    function atualizacaoPeriodica() {
+        obterdados(1);
+        obterdados(2);
+        obterdados(3);
+        obterdados(4);
+
+        // function sendData() {
+        //     var http = new XMLHttpRequest();
+        //     http.open('POST', 'http://localhost:3000/api/sendData', false);
+
+        // }
+
+        // setInterval(() => {
+        //     sendData();
+        // }, 2000);
+        setTimeout(atualizacaoPeriodica, 5000);
+    }
+
+    function obterdados(idAquario) {
+        fetch(`/medidas/tempo-real/${idAquario}`)
+            .then(resposta => {
+
+                if (resposta.ok) {
+                    resposta.json().then(resposta => {
+
+                        console.log(`Dados recebidos: ${JSON.stringify(resposta)}`);
+
+                        var dados = {
+                            temperatura: resposta[0].temperatura,
+                            umidade: resposta[0].umidade
+                        }
+
+                        alertar(resposta[0].temperatura, resposta[0].umidade, idAquario);
+                    });
+                } else {
+
+                    console.error('Nenhum dado encontrado ou erro na API');
+                }
+            })
+            .catch(function (error) {
+                console.error(`Erro na obtenção dos dados do aquario p/ gráfico: ${error.message}`);
+            });
+
+    }
+
+    function alertar(temperatura, umidade, idAquario) {
+        var limites = {
+            muito_quente: 32,
+            quente: 28.5,
+            ideal: 22,
+            frio: 20,
+            muito_frio: 16
+        };
+        var limitesu = {
+            muito_umido: 99,
+            umido: 92,
+            ideal: 90,
+            seco: 80,
+            muito_seco: 65
+        };
+        var classe_temperatura = 'cor-alerta';
+        var classe_temperaturau = 'cor-alerta';
+  
+        console.log(umidade)    
+        umidade = 90
+        // temperatura = Math.round(temperatura * 1.3636363) 
+        // validação do pop up
+        if (temperatura < limites.ideal || temperatura >= limites.quente) {
+            Swal.fire({
+                icon: 'warning',
+                title: 'TEMPERATURA FORA DOS PADRÕES IDEAIS',
+                text: 'VÁ PARA A ESTUFA 1 ARRUMAR OS PADRÕES',
+            })
+        } else if (umidade < limitesu.ideal || umidade > limitesu.ideal) {
+            Swal.fire({
+                icon: 'warning',
+                title: 'UMIDADE FORA DOS PADRÕES IDEAIS',
+                text: 'VÁ PARA A ESTUFA 1 ARRUMAR OS PADRÕES',
+            })
+        }
+        // fim do pop up
+
+        if (temperatura >= limites.muito_quente) {
+            classe_temperatura = 'cor-alerta perigo-quente';
+            console.log("caiu no 1")
+
+        }   else if (temperatura < limites.muito_quente && temperatura >= limites.quente) {
+        classe_temperatura = 'cor-alerta alerta-quente';
+            console.log("caiu no 2")
+        }
+        else if (temperatura < limites.quente && temperatura > limites.frio) {
+            classe_temperatura = 'cor-alerta ideal';
+            console.log("caiu no 3")
+        }
+        else if (temperatura <= limites.frio && temperatura > limites.muito_frio) {
+            classe_temperatura = 'cor-alerta alerta-frio';
+            console.log("caiu no 4")
+        }
+        else if (temperatura < limites.min_temperatura) {
+            classe_temperatura = 'cor-alerta perigo-frio';
+            console.log("caiu no 5")
+        }
+
+        //novo 
+        if (umidade >= limitesu.muito_umido) {
+            classe_temperaturau = 'cor-alerta perigo-quente';
+            console.log("caiu no 1")
+        }
+        else if (umidade < limitesu.muito_umido && umidade >= limitesu.umido) {
+            classe_temperaturau = 'cor-alerta alerta-quente';
+            console.log("caiu no 2")
+        }
+        else if (umidade < limitesu.umido && umidade > limitesu.seco) {
+            classe_temperaturau = 'cor-alerta ideal';
+            console.log("caiu no 3")
+        }
+        else if (umidade <= limitesu.seco && umidade > limitesu.muito_seco) {
+            classe_temperaturau = 'cor-alerta alerta-quente';
+            console.log("caiu no 4")
+        }
+        else if (umidade <= limitesu.muito_seco) {
+            classe_temperaturau = 'cor-alerta perigo-quente';
+            console.log("caiu no 5")
+        }
+
+        // fim do pop up
+
+        var card;
+
+        if (idAquario == 1) {
+            temp_sens_1.innerHTML = temperatura + "°C";
+            card = card_1
+
+            temp_sens_3.innerHTML = umidade + "%"
+        } else if (idAquario == 2) {
+            temp_sens_2.innerHTML = temperatura + "°C";
+            card = card_2
+        } else if (idAquario == 3) {
+            temp_sens_3.innerHTML = temperatura + "°C";
+            card = card_3
+        } else if (idAquario == 4) {
+            temp_sens_4.innerHTML = temperatura + "°C";
+            card = card_4
+        }
+
+        // alterando
+        temp_sens_1.className = classe_temperatura;
+        temp_sens_3.className = classe_temperaturau;
+    }
+
+    function AbrirSecao(secao) {
+        window.open("" + secao + "", "_parent");
+    }
+
+</script>
+
+</html>
