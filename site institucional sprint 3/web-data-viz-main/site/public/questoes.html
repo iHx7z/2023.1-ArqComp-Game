@@ -25,6 +25,20 @@
     </div>
     <!-- fim do cabeçalho -->
 
+    <!-- corações -->
+    <div id="paiCoracao">
+        <div id="divCoracao1">
+        <img id="coracao1" src="imgs/coraçãp.png"> </div>
+        <div id="divCoracao2">
+        <img id="coracao2" src="imgs/coraçãp.png"> </div>
+        <div id="divCoracao3">
+        <img id="coracao3" src="imgs/coraçãp.png"> </div>
+        <div id="divCoracao4">
+        <img id="coracao4" src="imgs/coraçãp.png"> </div>
+        <div id="divCoracao5">
+        <img id="coracao5" src="imgs/coraçãp.png"> </div>
+    </div>
+
     <!-- div principal -->
     <div id="principal">
         <div id="banner">
@@ -187,12 +201,29 @@
 
     function errado1() {
 
+        divCoracao5.innerHTML = ``
+
+        if (divCoracao1.innerHTML == `` && divCoracao2.innerHTML == `` && divCoracao3.innerHTML == `` && divCoracao4.innerHTML == `` && divCoracao5.innerHTML == ``) {
+            Swal.fire({
+            icon: 'error',
+            title: 'SUAS VIDAS ACABARAM',
+            text: 'Tente novamente',
+        })
+
+        setTimeout(() => {
+            window.location = "index.html";
+        }, "2000")
+        
+        } else {
+
         Swal.fire({
             icon: 'error',
             title: 'RESPOSTA ERRADA',
             text: 'Aperte no botão próxima questão',
         })
-
+        
+        
+        
         errados1 = 1
         // Enviando o valor da nova input
         fetch("/usuarios/Errado1", {
@@ -244,6 +275,7 @@
         `
 
     }
+    }
 
 
 
@@ -253,6 +285,8 @@
             icon: 'success',
             title: 'RESPOSTA CERTA',
             text: 'Aperte no botão próxima questão',
+
+            
         })
 
         curtidas2 = 1
@@ -310,11 +344,29 @@
 
     function errado2() {
 
+        divCoracao4.innerHTML = ``
+        divCoracao3.innerHTML = ``
+
+        if (divCoracao1.innerHTML == `` && divCoracao2.innerHTML == `` && divCoracao3.innerHTML == `` && divCoracao4.innerHTML == `` && divCoracao5.innerHTML == ``) {
+            Swal.fire({
+            icon: 'error',
+            title: 'SUAS VIDAS ACABARAM',
+            text: 'Tente novamente',
+        })
+
+        setTimeout(() => {
+            window.location = "index.html";
+        }, "2000")
+        
+        } else {
+
         Swal.fire({
             icon: 'error',
             title: 'RESPOSTA ERRADA',
             text: 'Aperte no botão próxima questão',
         })
+
+        
 
         errados2 = 1
         // Enviando o valor da nova input
@@ -365,6 +417,7 @@
         </div>
         `
 
+    }
     }
 
 
@@ -431,6 +484,24 @@
 
     function errado3() {
 
+        divCoracao3.innerHTML = ``
+        divCoracao2.innerHTML = ``
+
+        if (divCoracao1.innerHTML == `` && divCoracao2.innerHTML == `` && divCoracao3.innerHTML == `` && divCoracao4.innerHTML == `` && divCoracao5.innerHTML == ``) {
+            Swal.fire({
+            icon: 'error',
+            title: 'SUAS VIDAS ACABARAM',
+            text: 'Tente novamente',
+        })
+
+        setTimeout(() => {
+            window.location = "index.html";
+        }, "2000")
+        
+        } else {
+
+        
+
         Swal.fire({
             icon: 'error',
             title: 'RESPOSTA ERRADA',
@@ -485,6 +556,7 @@
         </div>
         `
 
+    }
     }
 
 
@@ -552,6 +624,24 @@
 
     function errado4() {
 
+        divCoracao2.innerHTML = ``
+        divCoracao1.innerHTML = ``
+
+        if (divCoracao1.innerHTML == `` && divCoracao2.innerHTML == `` && divCoracao3.innerHTML == `` && divCoracao4.innerHTML == `` && divCoracao5.innerHTML == ``) {
+            Swal.fire({
+            icon: 'error',
+            title: 'SUAS VIDAS ACABARAM',
+            text: 'Tente novamente',
+        })
+
+        setTimeout(() => {
+            window.location = "index.html";
+        }, "2000")
+        
+        } else {
+
+        
+
         Swal.fire({
             icon: 'error',
             title: 'RESPOSTA ERRADA',
@@ -607,6 +697,7 @@
         </div>
         `
 
+    }
     }
 
 
@@ -675,6 +766,21 @@
 
     function errado5() {
 
+        divCoracao1.innerHTML = ``
+
+        if (divCoracao1.innerHTML == `` && divCoracao2.innerHTML == `` && divCoracao3.innerHTML == `` && divCoracao4.innerHTML == `` && divCoracao5.innerHTML == ``) {
+            Swal.fire({
+            icon: 'error',
+            title: 'SUAS VIDAS ACABARAM',
+            text: 'Tente novamente',
+        })
+
+        setTimeout(() => {
+            window.location = "index.html";
+        }, "2000")
+        
+        } else {
+
         Swal.fire({
             icon: 'error',
             title: 'RESPOSTA ERRADA',
@@ -732,6 +838,7 @@
         `
 
     }
+    }
 
 
 
@@ -776,10 +883,23 @@
 
     function errado6() {
 
-        Swal.fire({
+        if (divCoracao1.innerHTML == `` && divCoracao2.innerHTML == `` && divCoracao3.innerHTML == `` && divCoracao4.innerHTML == `` && divCoracao5.innerHTML == ``) {
+            Swal.fire({
             icon: 'error',
-            title: 'RESPOSTA ERRADA',
-            text: 'JOGO FINALIZADO',
+            title: 'SUAS VIDAS ACABARAM',
+            text: 'Tente novamente',
+        })
+
+        setTimeout(() => {
+            window.location = "index.html";
+        }, "2000")
+        
+        } else {
+
+        Swal.fire({
+            icon: 'sucess',
+            title: 'PARABÉNS VOCÊ TERMINOU COM VIDA',
+            text: 'Redirecionando',
         })
 
         errados6 = 1
@@ -808,6 +928,7 @@
             window.location = "index.html";
         }, "2000")
 
+    }
     }
 
 
