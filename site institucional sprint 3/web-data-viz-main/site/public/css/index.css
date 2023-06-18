@@ -1,30 +1,7 @@
 body {
     margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
-
-/* cabeçalho */
-header {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-}
-
-li {
-    display: inline-block;
-    margin: 3vh;
-    color: black;
-}
-
-li:hover {
-    text-decoration: underline;
-}
-
-.link-menu{
-    color: black;
-}
-/* fim do cabeçalho */
 
 #botaoIniciar {
     width: 10vw;
@@ -40,35 +17,145 @@ li:hover {
     letter-spacing: 3px;
     cursor: pointer;
     box-shadow: 0px 10px 40px -12px #00000056;
-    margin-top: 70vh;
 }
-
-#divBotao {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-}
-
-/* fim da principal */
-
-/* começo do rodapé */
-.rodapé {
-    background-color: black;
-    color: white;
-    height: 50vh;
-    width: 100%;
-    font-size: 15px;
-    display: flex;
-}
-
-#contato {
-    display: block;
-    
-}
-/* fim do rodape */
 
 #bannerPrincipal {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 100%;
     height: 80vh;
     background: linear-gradient(to bottom, #4828ff, #00bfff);
+}
+
+#fundoPrincipal {
+    width: 85vw;
+    height: 80vh;
+}
+
+#cabecalho {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: white;
+}
+
+li {
+    display: inline-block;
+    margin: 20px;
+    color: white;
+}
+
+li:hover {
+    text-decoration: underline;
+}
+
+.link-menu{
+    color: black;
+}
+
+.link-menu:hover{
+    text-decoration: underline;
+    color: black;
+}
+/* fim do cabeçalho */
+
+#divTituloMeio {
+    display: flex;
+    width: 85vw;
+    height: 50vh;
+    margin-top: 20px;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    flex-direction: column;
+}
+
+#textoMeio {
+    font-size: 20px;
+}
+
+#paiRodape {
+    background-color: white;
+    width: 100%;
+    height: 20vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#filhoRodape {
+    /* background-color: #4828ff; */
+    width: 85vw;
+    height: 15vh;
+    display: flex;
+    justify-content: space-between;
+}
+
+#divContato {
+    width: 20vw;
+    height: 10vh;
+    margin-top: -10px;
+}
+
+#contato {
+    color: black;
+    font-size: 18px;
+}
+
+#tonyEmail {
+    font-size: 13px;
+}
+
+#pedEmail {
+    font-size: 13px;
+}
+
+#rodapeMeio {
+    margin-top: 40px;
+    width: 20vw;
+    height: 10vh;
+    display: flex;
+    justify-content: center;
+    align-items: end;
+}
+
+#rodapeFim {
+    margin-top: 40px;
+    width: 20vw;
+    height: 10vh;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    
+}
+
+#spTech {
+    font-size: 13px;
+    font-weight: bold;
+}
+
+#insta {
+    width: 2vw;
+    height: 4vh;
+}
+
+#linkedin {
+    width: 2vw;
+    height: 4vh;
+}
+
+#twitter {
+    width: 2vw;
+    height: 4vh;
+}
+
+#facebook {
+    width: 2vw;
+    height: 4vh;
+}
+
+#botaoIniciar:hover {
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
 }
