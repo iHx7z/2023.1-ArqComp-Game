@@ -1,10 +1,6 @@
-/* cabeçalho */
-header {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 li {
@@ -20,7 +16,32 @@ li:hover {
 .link-menu{
     color: black;
 }
-/* fim do cabeçalho */
+
+#cabecalho {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: white;
+}
+
+#bannerPrincipal {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 20vh;
+}
+
+#fundoPrincipal {
+    width: 80vw;
+    height: 15vh;
+}
+
+#tituloCabecalho {
+    color: black;
+}
+
+
 
 #paiCoracao {
     display: flex;
@@ -32,27 +53,27 @@ li:hover {
 
 #coracao1 {
     width: 5vw;
-    height: 8vh;
+    height: 9vh;
 }
 
 #coracao2 {
     width: 5vw;
-    height: 8vh;
+    height: 9vh;
 }
 
 #coracao3 {
     width: 5vw;
-    height: 8vh;
+    height: 9vh;
 }
 
 #coracao4 {
     width: 5vw;
-    height: 8vh;
+    height: 9vh;
 }
 
 #coracao5 {
     width: 5vw;
-    height: 8vh;
+    height: 9vh;
 }
 
 /* inicio da principal */
@@ -66,7 +87,7 @@ li:hover {
 }
 
 #banner {
-    background-color: rgb(21, 73, 244);
+    background: linear-gradient(to bottom, #4828ff, #00bfff);
     width: 70vw;
     height: 70vh;
     display: flex;
@@ -95,6 +116,7 @@ li:hover {
     width: 100%;
     display: flex;
     justify-content: center;
+    color: white;
 }
 
 #divBotao {
@@ -178,5 +200,6 @@ li:hover {
 #errado {
 background-color: aqua;
 }
+
 
 
