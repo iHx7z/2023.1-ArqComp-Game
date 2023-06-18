@@ -41,7 +41,7 @@ function errado1(id) {
     // Insira exatamente a query do banco aqui, lembrando da nomenclatura exata nos valores
     //  e na ordem de inserção dos dados.
     var instrucao = `
-        INSERT INTO pergunta1 (tipo, num ,fkUser) VALUES ('errado', 1);
+        INSERT INTO pergunta1 (tipo, num) VALUES ('errado', 1);
     `;
     console.log("Executando a instrução SQL: \n" + instrucao);
     return database.executar(instrucao);
@@ -52,7 +52,7 @@ function errado2(id) {
     // Insira exatamente a query do banco aqui, lembrando da nomenclatura exata nos valores
     //  e na ordem de inserção dos dados.
     var instrucao = `
-        INSERT INTO pergunta2 (tipo, num ,fkUser) VALUES ('errado', 1);
+        INSERT INTO pergunta2 (tipo, num) VALUES ('errado', 1);
     `;
     console.log("Executando a instrução SQL: \n" + instrucao);
     return database.executar(instrucao);
@@ -191,11 +191,12 @@ module.exports = {
     errado4,
     errado5,
     errado5,
+    errado6,
 
     certo1,
     certo2,
     certo3,
     certo4,
     certo5,
-    certo6
+    certo6,
 };

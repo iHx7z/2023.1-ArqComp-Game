@@ -33,7 +33,7 @@ li:hover {
 }
 
 #banner {
-    background-color: pink;
+    background-color: darkgray;
     width: 70vw;
     height: 70vh;
     display: flex;

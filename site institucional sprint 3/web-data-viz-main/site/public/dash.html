@@ -9,6 +9,26 @@
     <div class="dash_resposta">
         <canvas id="myChart"></canvas>
     </div>
+
+    <div class="dash_resposta">
+        <canvas id="myChart2"></canvas>
+    </div>
+
+    <div class="dash_resposta">
+        <canvas id="myChart3"></canvas>
+    </div>
+
+    <div class="dash_resposta">
+        <canvas id="myChart4"></canvas>
+    </div>
+
+    <div class="dash_resposta">
+        <canvas id="myChart5"></canvas>
+    </div>
+
+    <div class="dash_resposta">
+        <canvas id="myChart6"></canvas>
+    </div>
 </body>
 </html>
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
@@ -17,8 +37,6 @@
 window.onload = obterDadosGrafico();
 
 function obterDadosGrafico(id) {
-
-
 
 fetch(`/medidas/ultimas/${id}`, { cache: 'no-store' }).then(function (response) {
     if (response.ok) {
