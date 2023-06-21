@@ -49,7 +49,7 @@ function buscarUltimasMedidas2(req, res) {
 
     const limite_linhas = 7;
 
-    var idAquario2 = req.params.id;
+    var idAquario2 = req.params.id2;
 
     console.log(`Recuperando as ultimas ${limite_linhas} medidas`);
 
@@ -69,7 +69,7 @@ function buscarUltimasMedidas2(req, res) {
 
 function buscarMedidasEmTempoReal2(req, res) {
 
-    var idAquario2 = req.params.id;
+    var idAquario2 = req.params.id2;
 
     console.log(`Recuperando medidas em tempo real`);
 
@@ -92,7 +92,7 @@ function buscarUltimasMedidas3(req, res) {
 
     const limite_linhas = 7;
 
-    var idAquario3 = req.params.id;
+    var idAquario3 = req.params.id3;
 
     console.log(`Recuperando as ultimas ${limite_linhas} medidas`);
 
@@ -112,7 +112,7 @@ function buscarUltimasMedidas3(req, res) {
 
 function buscarMedidasEmTempoReal3(req, res) {
 
-    var idAquario3 = req.params.id;
+    var idAquario3 = req.params.id3;
 
     console.log(`Recuperando medidas em tempo real`);
 
@@ -137,7 +137,7 @@ function buscarUltimasMedidas4(req, res) {
 
     const limite_linhas = 7;
 
-    var idAquario4 = req.params.id;
+    var idAquario4 = req.params.id4;
 
     console.log(`Recuperando as ultimas ${limite_linhas} medidas`);
 
@@ -157,7 +157,7 @@ function buscarUltimasMedidas4(req, res) {
 
 function buscarMedidasEmTempoReal4(req, res) {
 
-    var idAquario4 = req.params.id;
+    var idAquario4 = req.params.id4;
 
     console.log(`Recuperando medidas em tempo real`);
 
@@ -184,7 +184,7 @@ function buscarUltimasMedidas5(req, res) {
 
     const limite_linhas = 7;
 
-    var idAquario5 = req.params.id;
+    var idAquario5 = req.params.id5;
 
     console.log(`Recuperando as ultimas ${limite_linhas} medidas`);
 
@@ -204,7 +204,7 @@ function buscarUltimasMedidas5(req, res) {
 
 function buscarMedidasEmTempoReal5(req, res) {
 
-    var idAquario5 = req.params.id;
+    var idAquario5 = req.params.id5;
 
     console.log(`Recuperando medidas em tempo real`);
 
@@ -228,7 +228,7 @@ function buscarUltimasMedidas6(req, res) {
 
     const limite_linhas = 7;
 
-    var idAquario6 = req.params.id;
+    var idAquario6 = req.params.id6;
 
     console.log(`Recuperando as ultimas ${limite_linhas} medidas`);
 
@@ -248,7 +248,7 @@ function buscarUltimasMedidas6(req, res) {
 
 function buscarMedidasEmTempoReal6(req, res) {
 
-    var idAquario6 = req.params.id;
+    var idAquario6 = req.params.id6;
 
     console.log(`Recuperando medidas em tempo real`);
 
@@ -277,6 +277,6 @@ module.exports = {
     buscarUltimasMedidas5,
     buscarMedidasEmTempoReal5,
     buscarUltimasMedidas6,
-    buscarMedidasEmTempoReal6
+    buscarMedidasEmTempoReal6,
 
 }

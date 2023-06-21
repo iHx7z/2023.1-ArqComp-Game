@@ -1,0 +1,51 @@
+/* #myChart{
+    width: 200px;
+    height: 200px;
+}
+
+#myChart2{
+    width: 200px;
+    height: 200px;
+    
+}
+
+#myChart3{
+    width: 200px;
+    height: 200px;
+}
+
+#myChart4{
+    width: 200px;
+    height: 200px;
+}
+
+#myChart5{
+    width: 200px;
+    height: 200px;
+}
+
+#myChart6{
+    width: 200px;
+    height: 200px; */
+/* } */
+.fundo{
+    display: flex;
+}
+
+.dash_resposta1{
+    height: 80px;
+}
+
+
+.div-pai{
+display: flex;
+
+
+}
+.bloco1{
+    width: 50%;
+}
+.bloco2{
+    display: flex;
+    width: 50%;
+}
