@@ -1,51 +1,52 @@
-/* #myChart{
-    width: 200px;
-    height: 200px;
-}
 
-#myChart2{
-    width: 200px;
-    height: 200px;
-    
-}
-
-#myChart3{
-    width: 200px;
-    height: 200px;
-}
-
-#myChart4{
-    width: 200px;
-    height: 200px;
-}
-
-#myChart5{
-    width: 200px;
-    height: 200px;
-}
-
-#myChart6{
-    width: 200px;
-    height: 200px; */
-/* } */
-.fundo{
+#paiGraficos1 {
+    width: 100%;
+    height: 50vh;
     display: flex;
+    align-items: center;
+    justify-content: space-around;
 }
 
-.dash_resposta1{
-    height: 80px;
+#divG1 {
+    width: 28vw;
+    height: 50vh;
+    text-align: center;
 }
 
-
-.div-pai{
-display: flex;
-
-
+#divG2 {
+    width: 28vw;
+    height: 50vh;
+    text-align: center;
 }
-.bloco1{
-    width: 50%;
+
+#divG3 {
+    width: 28vw;
+    height: 50vh;
+    text-align: center;
 }
-.bloco2{
+
+#paiGraficos2 {
+    width: 100%;
+    height: 50vh;
     display: flex;
-    width: 50%;
+    align-items: center;
+    justify-content: space-around;
+}
+
+#divG4 {
+    width: 28vw;
+    height: 50vh;
+    text-align: center;
+}
+
+#divG5 {
+    width: 28vw;
+    height: 50vh;
+    text-align: center;
+}
+
+#divG6 {
+    width: 28vw;
+    height: 50vh;
+    text-align: center;
 }

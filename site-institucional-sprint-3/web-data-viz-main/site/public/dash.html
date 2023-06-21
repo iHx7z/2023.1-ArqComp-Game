@@ -4,38 +4,72 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dashboards</title>
-    <link rel="stylesheet" href="../public/css/dash.css">
+    <link rel="stylesheet" href="css/dash.css">
+    <link rel="stylesheet" href="./css/questoes.css">
 </head>
-<body class="fundo"><div class="div-pai">
-    <div class="bloco1">
-    <div class="dash_resposta1">
+<body>
+
+<!-- cabeçalho -->
+<div id="bannerPrincipal">
+    <div id="fundoPrincipal">
+        <div id="cabecalho">
+            <h1 id="tituloCabecalho">ANÁLISE GERAL</h1>
+                <div id="divLink">
+                <a href="index.html"><li>HOME</li></a>
+                <a href="questoes.html"><li>GAME</li></a> </div>
+        </div>
+    </div>
+</div>
+
+<div id="paiGraficos1">
+
+    <div id="divG1">
+        <p>Pergunta 1</p>
         <canvas id="myChart"></canvas>
     </div>
 
-    <div class="dash_resposta">
+    <div id="divG2">
+        <p>Pergunta 2</p>
         <canvas id="myChart2"></canvas>
     </div>
 
-    <div class="dash_resposta">
+    <div id="divG3">
+        <p>Pergunta 3</p>
         <canvas id="myChart3"></canvas>
     </div>
+
 </div>
-<div class="bloco2">
-    <div class="dash_resposta">
+
+<!-- fim -->
+
+<div id="paiGraficos2">
+
+    <div id="divG4">
+        <p>Pergunta 4</p>
         <canvas id="myChart4"></canvas>
     </div>
 
-    <div class="dash_resposta">
+    <div id="divG5">
+        <p>Pergunta 5</p>
         <canvas id="myChart5"></canvas>
     </div>
 
-    <div class="dash_resposta">
+    <div id="divG6">
+        <p>Pergunta 6</p>
         <canvas id="myChart6"></canvas>
     </div>
+
 </div>
+
+<!-- começo do rodapé -->
+<div class="rodapé">
+    <h4> copyright by anthony ferreira & pedro pinto &copy; </h4>
 </div>
+<!-- fim do rodapé -->
+
 </body>
 </html>
+
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 <script>
 
